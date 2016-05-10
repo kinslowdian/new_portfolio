@@ -87,6 +87,8 @@ p
 	background: #FFFA78;
 	display: inline-block;
 
+	border-radius: 2px;
+
 	text-transform: uppercase;
 	text-align: center;
 	text-decoration: none;
@@ -282,6 +284,7 @@ p
 {
 	width: 100%;
 	position: relative;
+	margin-bottom: 80px;
 }
 
 .project-hero img
@@ -297,14 +300,56 @@ p
 {
 	width: inherit;
 	position: relative;
+}
+
+.project-hero .project-info ul
+{
 	overflow: auto;
 }
 
-.project-hero .project-info .project-info-left
+.project-hero .project-info li
+{
+	display: block;
+	float: left;
+}
+
+.project-hero .project-info h3
+{
+	margin-bottom: 0.5em;
+}
+
+.project-hero .project-info p
+{
+	padding-right: 40px;
+}
+
+.project-hero .project-info .project-info-details
+{
+	position: relative;
+	width: 60%;
+}
+
+.project-hero .project-info .project-info-ui
+{
+	position: relative;
+	width: 40%;
+	padding-top: 30px;
+}
+
+
+
+
+
+
+
+
+
+/* .project-hero .project-info .project-info-left
 {
 	width: 60%;
 	position: relative;
-	display: inline-block;
+	display: block;
+	float: left;
 
 	outline: 1px solid black;
 }
@@ -319,12 +364,14 @@ p
 	padding-right: 40px;
 }
 
+
+
 .project-hero .project-info .project-info-right
 {
 	width: 40%;
-
 	position: relative;
-	display: inline-block;
+	display: block;
+	float: left;
 
 	outline: 1px solid black;
 }
@@ -339,7 +386,7 @@ p
 .project-hero .project-info .project-info-right .ui-basic-button:last-of-type
 {
 	margin-right: 0;
-}
+} */
 
 
 
