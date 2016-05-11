@@ -101,6 +101,9 @@ p
 
 	min-width: 30%;
 
+	-webkit-touch-callout: none;
+	touch-callout: none;
+
 }
 
 .ui-basic-button:hover
@@ -124,6 +127,12 @@ p
 	position: relative;
 	margin-top: 30px;
 	border-bottom: 1px solid #C5C5C5;
+}
+
+.nav div
+{
+	-webkit-touch-callout: none;
+	touch-callout: none;
 }
 
 .nav-left
@@ -197,6 +206,16 @@ p
 {
 	color: #4A4A4A;
 	color: #a8c4a2;
+}
+
+.nav-hamburger
+{
+	width: 28px;
+	height: 28px;
+	position: absolute;
+	right: 0;
+	bottom: 20px;
+	background: #ff0033;
 }
 
 .title-block
@@ -522,6 +541,11 @@ footer a:hover
 		display: none;
 	}
 
+	.nav-hamburger
+	{
+		display: inline;
+	}
+
 	.title-block
 	{
 		padding: 40px 0;
@@ -775,6 +799,10 @@ footer a:hover
 		display: inline;
 	}
 
+	.nav-hamburger
+	{
+		display: none;
+	}
 
 	.project-hero .project-info .project-info-details
 	{
