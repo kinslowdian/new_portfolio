@@ -410,7 +410,7 @@ footer a:hover
 
 
 
-/* ------ ANIMATION */
+/* ANIMATION */
 .tween
 {
 	backface-visibility: hidden;
@@ -426,17 +426,17 @@ footer a:hover
 {
 	0%		{-webkit-transform: translateY(0px);}
 	50%		{-webkit-transform: translateY(-6px);}
-	100%	{-webkit-transform: translateY(0px);};
+	100%	{-webkit-transform: translateY(0px);}
 }
 
 @keyframes tweenNameIconFrames
 {
 	0%		{transform: translateY(0px);}
 	50%		{transform: translateY(-6px);}
-	100%	{transform: translateY(0px);};
+	100%	{transform: translateY(0px);}
 }
 
-/* ------ IMAGES */
+/* IMAGES */
 
 .gfx-icon
 {
@@ -446,15 +446,13 @@ footer a:hover
 	background-position: center center;
 }
 
-/* ------ RESPONSIVE */
-
-/* MOBILE screen.width >= 300 */
+/* RESPONSIVE */
 
 @media only screen and (min-width: 300px)
 {
 	.page-wrapper
 	{
-		/* background: red; */
+
 	}
 
 	h1
@@ -588,12 +586,12 @@ footer a:hover
 }
 
 
-/* TABLET screen.width >= 600 */
+
 @media screen and (min-width: 600px)
 {
 	.page-wrapper
 	{
-		/* background: green; */
+
 	}
 
 	h1
@@ -727,12 +725,11 @@ footer a:hover
 	}
 }
 
-/* DESKTOP screen.width >= 1200 */
 @media screen and (min-width: 900px)
 {
 	.page-wrapper
 	{
-		/* background: blue !important; */
+
 	}
 
 	.page-inner
