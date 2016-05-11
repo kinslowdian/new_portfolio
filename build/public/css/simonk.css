@@ -99,6 +99,8 @@ p
 	-webkit-transition: background 300ms linear;
 	transition: background 300ms linear;
 
+	min-width: 30%;
+
 }
 
 .ui-basic-button:hover
@@ -364,6 +366,13 @@ p
 	padding-top: 30px;
 }
 
+.footer-ape
+{
+	width: 100%;
+	height: 240px;
+	position: relative;
+}
+
 footer
 {
 	width: 100%;
@@ -406,8 +415,6 @@ footer a:hover
 {
 	color: #fff;
 }
-
-
 
 
 /* ANIMATION */
@@ -457,7 +464,7 @@ footer a:hover
 
 	h1
 	{
-		font-size: 0.8em;
+		font-size: 0.6em;
 		line-height: 2ex;
 	}
 
@@ -560,7 +567,7 @@ footer a:hover
 
 	.project-hero:last-of-type
 	{
-		margin-bottom: 160px;
+		margin-bottom: 80px;
 	}
 
 	.project-hero .project-info .project-info-details
@@ -700,7 +707,7 @@ footer a:hover
 
 	.project-hero:last-of-type
 	{
-		margin-bottom: 320px;
+		margin-bottom: 160px;
 	}
 
 	.project-hero .project-info .project-info-details
