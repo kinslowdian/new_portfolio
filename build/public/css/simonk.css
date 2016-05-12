@@ -88,24 +88,28 @@ h1
 {
 	font-size: 1em;
 	line-height: 2ex;
+	line-height:1.2;
 }
 
 h2
 {
 	font-size: 0.6em;
 	line-height: 2ex;
+	line-height: 1.2;
 }
 
 h3
 {
 	font-size: 0.5em;
 	line-height: 2ex;
+	line-height: 1.2;
 }
 
 p
 {
 	font-size: 0.3em;
-	line-height: 3ex;
+	line-height: 4ex;
+	line-height: 1.8;
 }
 
 .ui-basic-button
@@ -252,7 +256,19 @@ p
 	position: absolute;
 	right: 0;
 	bottom: 20px;
+}
+
+.nav-hamburger
+{
 	background-image: url(../img/hamburger.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100% 100%;
+}
+
+.nav-close
+{
+	background-image: url(../img/close.svg);
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: 100% 100%;
@@ -364,6 +380,7 @@ p
 {
 	font-size: 0.6em;
 	line-height: 2.4ex;
+	line-height: 1.8;
 	padding-bottom: 30px;
 }
 
@@ -633,6 +650,7 @@ footer a:hover
 {
 	html, body
 	{
+		font-size: 40px;
 		background: #e5ffb2;
 	}
 
@@ -641,7 +659,7 @@ footer a:hover
 
 	}
 
-	h1
+/* 	h1
 	{
 		font-size: 0.6em;
 		line-height: 2ex;
@@ -663,7 +681,7 @@ footer a:hover
 	{
 		font-size: 0.25em;
 		line-height: 3ex;
-	}
+	} */
 
 	.page-inner
 	{
@@ -783,6 +801,7 @@ footer a:hover
 	{
 		width: 100%;
 		padding: 20px 0;
+		margin-bottom: 10px;
 	}
 }
 
@@ -790,12 +809,17 @@ footer a:hover
 
 @media screen and (min-width: 600px)
 {
+	html, body
+	{
+		font-size: 50px;
+	}
+
 	.page-wrapper
 	{
 
 	}
 
-	h1
+/* 	h1
 	{
 		font-size: 1em;
 		line-height: 2ex;
@@ -817,7 +841,7 @@ footer a:hover
 	{
 		font-size: 0.3em;
 		line-height: 3ex;
-	}
+	} */
 
 	.page-inner
 	{
@@ -880,7 +904,7 @@ footer a:hover
 	.intro-left blockquote .intro-lead
 	{
 		font-size: 0.6em;
-		line-height: 2.4ex;
+		/* line-height: 2.4ex; */
 		padding-bottom: 30px;
 	}
 
@@ -928,6 +952,7 @@ footer a:hover
 	{
 		width: auto;
 		padding: 20px;
+		margin-bottom: 10px;
 	}
 }
 
@@ -935,6 +960,7 @@ footer a:hover
 {
 	html, body
 	{
+		font-size: 50px;
 		background: #fff;
 	}
 
@@ -997,6 +1023,11 @@ footer a:hover
 	.project-hero .project-info p
 	{
 		padding-right: 40px;
+	}
+
+	.ui-basic-button
+	{
+		margin-bottom: 10;
 	}
 }
 
