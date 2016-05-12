@@ -13,7 +13,11 @@ html, body
 	text-transform: none;
 	text-decoration: none;
 
+	font-size: 50px;
+
 	color: #4A4A4A;
+
+	background: #e5ffb2;
 }
 
 .font-heavy
@@ -35,14 +39,40 @@ html, body
 .center-y
 {
 	top: 50%;
-	transform: translateY(-50%);
 	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.center-x
+{
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
 }
 
 .page-wrapper
 {
 	width: 100%;
 	position: relative;
+	background: #fff;
+
+	overflow-x: hidden;
+
+	-webkit-transition: -webkit-transform 400ms ease-in-out;
+	transition: transform 400ms ease-in-out;
+}
+
+.nav-fx-page-wrapper
+{
+	overflow: hidden !important;
+	max-height: 100%;
+	transform: translateX(-100%);
+	-webkit-transform: translateX(-100%);
+}
+
+.nav-fx-body
+{
+	overflow: hidden;
 }
 
 .page-content
@@ -52,8 +82,6 @@ html, body
 
 	position: relative;
 	margin: 0 auto;
-
-	font-size: 50px;
 }
 
 h1
@@ -153,6 +181,13 @@ p
 	padding: 10px 0 0 0;
 }
 
+.nav-left h2 a
+{
+	text-decoration: none;
+	text-transform: none;
+	color: #4A4A4A;
+}
+
 .nav-left .name-icon
 {
 	width: 40px;
@@ -186,9 +221,11 @@ p
 	display: block;
 	text-align: right;
 	font-size: 0.4em;
+	font-size: 0.3em;
 	line-height: 1;
 	padding-left: 40px;
 	text-decoration: none;
+	text-transform: uppercase;
 	color: #FFD001;
 	color: #66245b;
 }
@@ -208,14 +245,76 @@ p
 	color: #a8c4a2;
 }
 
-.nav-hamburger
+.nav-hamburger, .nav-close
 {
 	width: 28px;
 	height: 28px;
 	position: absolute;
 	right: 0;
 	bottom: 20px;
-	background: #ff0033;
+	background-image: url(../img/hamburger.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100% 100%;
+}
+
+.mobile-nav
+{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+
+	left: 0; right: 0; top: 0; bottom: 0;
+
+	background: #e5ffb2;
+
+	overflow: hidden;
+}
+
+.mobile-nav-main
+{
+	width: 100%;
+	position: relative;
+
+	padding-top: 40px;
+
+	-webkit-transform: translateX(-100%);
+	transform: translateX(-100%);
+
+	-webkit-transition: -webkit-transform 600ms ease-in-out;
+	transition: transform 600ms ease-in-out;
+}
+
+.nav-fx-mobile-nav-main
+{
+	-webkit-transform: translateX(0%);
+	transform: translateX(0%);
+}
+
+.mobile-nav-main li
+{
+	display: block;
+	text-align: left;
+	font-size: 0.8em;
+	line-height: 1.5;
+	text-transform: uppercase;
+
+	text-decoration: none;
+	color: #FFD001;
+	color: #66245b;
+}
+
+.mobile-nav-main a
+{
+	position: relative;
+
+	text-decoration: none;
+	-webkit-transition: 300ms linear;
+	transition: 300ms linear;
+
+
+	color: #FFD001;
+	color: #66245b;
 }
 
 .title-block
@@ -312,6 +411,7 @@ p
 	max-width: 960px;
 }
 
+/*
 .section-title
 {
 	width: 100%;
@@ -322,6 +422,21 @@ p
 	margin-bottom: 80px;
 
 	border-bottom: 1px solid #4A4A4A;
+}
+*/
+
+.section-title
+{
+	width: 100%;
+	position: relative;
+}
+
+.section-title h2
+{
+	text-align: center;
+	border-bottom: 1px solid #4A4A4A;
+	padding-bottom: 20px;
+	margin-bottom: 80px;
 }
 
 .project-hero
@@ -385,6 +500,43 @@ p
 	padding-top: 30px;
 }
 
+.contact-block
+{
+	width: 100%;
+	position: relative;
+	margin-bottom: 80px;
+}
+
+.contact-block-inner
+{
+	position: relative;
+	display: inline-block;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.contact-block-inner li
+{
+	font-size: 0.5em;
+	line-height: 3;
+	border-bottom: 1px solid #C5C5C5;
+	color: #66245b;
+}
+
+.contact-block-inner a
+{
+	text-decoration: none;
+	text-transform: none;
+	-webkit-transition: 300ms linear;
+	transition: 300ms linear;
+	color: #66245b;
+}
+
+.contact-block-inner a:hover
+{
+	color: #a8c4a2;
+}
+
 .footer-ape
 {
 	width: 100%;
@@ -436,9 +588,12 @@ footer a:hover
 }
 
 
+
+
 /* ANIMATION */
 .tween
 {
+	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 }
 
@@ -476,6 +631,11 @@ footer a:hover
 
 @media only screen and (min-width: 300px)
 {
+	html, body
+	{
+		background: #e5ffb2;
+	}
+
 	.page-wrapper
 	{
 
@@ -509,6 +669,11 @@ footer a:hover
 	{
 		width: 94%;
 		margin: 0 auto;
+	}
+
+	.nav
+	{
+		margin-top: 0px;
 	}
 
 	.nav-left
@@ -579,7 +744,12 @@ footer a:hover
 		font-size: 0.3em;
 	}
 
-	.section-title
+/* 	.section-title
+	{
+		margin-bottom: 40px;
+	} */
+
+	.section-title h2
 	{
 		margin-bottom: 40px;
 	}
@@ -655,6 +825,11 @@ footer a:hover
 		margin: 0 auto;
 	}
 
+	.nav
+	{
+		margin-top: 30px;
+	}
+
 	.nav-left
 	{
 		width: 70%;
@@ -719,9 +894,9 @@ footer a:hover
 		font-size: 0.3em;
 	}
 
-	.section-title
+	.section-title h2
 	{
-		margin-bottom: 40px;
+		margin-bottom: 80px;
 	}
 
 	.project-hero
@@ -758,6 +933,11 @@ footer a:hover
 
 @media screen and (min-width: 900px)
 {
+	html, body
+	{
+		background: #fff;
+	}
+
 	.page-wrapper
 	{
 

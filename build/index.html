@@ -19,7 +19,25 @@
 
 <body onload="portfolio_init(event)">
 
-<div class="page-wrapper">
+<div class="mobile-nav tween">
+	<div class="page-inner">
+		<div class="nav">
+			<div class="nav-left center-y">
+				<h2 class="font-heavy">Menu</h2>
+			</div>
+			<div class="nav-close"></div>
+		</div>
+
+		<ul class="mobile-nav-main font-light">
+			<li><a href="work.html">Work</a></li>
+			<li><a href="personal.html">Own Projects</a></li>
+			<li><a href="contact.html">Contact / Misc</a></li>
+		</ul>
+
+	</div>
+</div> <!-- .mobile-nav -->
+
+<div class="page-wrapper tween">
 
 	<div class="page-content">
 
@@ -34,9 +52,9 @@
 
 				<div class="nav-right center-y">
 					<ul class="nav-links font-light">
-						<li class="tween"><a href="#">Work</a></li>
-						<li class="tween"><a href="#">Own Projects</a></li>
-						<li class="tween"><a href="#">Contact / Misc</a></li>
+						<li class="tween"><a href="work.html">Work</a></li>
+						<li class="tween"><a href="personal.html">Own Projects</a></li>
+						<li class="tween"><a href="contact.html">Contact / Misc</a></li>
 					</ul>
 				</div>
 
@@ -156,17 +174,25 @@
 
 	</div> <!-- .page-content -->
 
-</div> <!-- .page-wrapper -->
-
 <footer>
 	<div class="page-content">
 		<div class="page-inner">
 			<p class="signoff-deets font-heavy">Designed & developed 2016</p>
 			<p class="signoff-email font-heavy tween"><a href="#">simonkinslow@gmail.com</a></p>
-			<!-- <p class="signoff-email font-heavy tween">simonkinslow@gmail.com</p> -->
 		</div>
 	</div>
 </footer>
+
+</div> <!-- .page-wrapper -->
+
+<!-- <footer>
+	<div class="page-content">
+		<div class="page-inner">
+			<p class="signoff-deets font-heavy">Designed & developed 2016</p>
+			<p class="signoff-email font-heavy tween"><a href="#">simonkinslow@gmail.com</a></p>
+		</div>
+	</div>
+</footer> -->
 
 <script type="text/javascript" src="public/js/simonk.js"></script>
 </body>
