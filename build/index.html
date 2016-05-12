@@ -29,7 +29,7 @@
 		</div>
 
 		<ul class="mobile-nav-main font-light">
-			<li onclick="navigation_event(event)"><a href="#">Welcome</a></li>
+			<li class="page-current" onclick="navigation_event(event)"><a href="#">Welcome</a></li>
 			<li><a href="work.html">Work</a></li>
 			<li><a href="personal.html">Own Projects</a></li>
 			<li><a href="contact.html">Contact / Misc</a></li>
@@ -48,7 +48,15 @@
 
 				<div class="nav-left center-y">
 					<h2 class="font-heavy"><span class="def">Simon Kinslow</span><span class="mob">S Kinslow</span></h2>
-					<div class="name-icon gfx-icon tween"></div> <!-- tween-name-icon -->
+					<div class="name-icon tween no-select">
+						<div class="player-sprite tween-player-XX">
+							<div class="map-goat-legs pixels_map_player tween-mapPlayerWalk_stop"></div>
+							<div class="map-goat-body pixels_map_player"></div>
+							<div class="map-goat-head pixels_map_player tween-map-goat-head mapPlayer_head_default"></div>
+							<div class="map-goat-hand-L pixels_map_player tween-map-goat-hand-L"></div>
+							<div class="map-goat-hand-R pixels_map_player tween-map-goat-hand-R"></div>
+						</div>
+					</div> <!-- tween-name-icon -->
 				</div>
 
 				<div class="nav-right center-y">
@@ -143,7 +151,7 @@
 				</div>
 			</section> <!-- .project-hero -->
 
-			<div class="footer-ape">
+			<div class="footer-ape no-select">
 				<div class="monkey_king_area monkey_king_area_ice">
 
 					<div class="monkey_king_masked">
