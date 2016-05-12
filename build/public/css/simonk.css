@@ -18,6 +18,8 @@ html, body
 	color: #4A4A4A;
 
 	background: #e5ffb2;
+
+	overflow-x: hidden;
 }
 
 .font-heavy
@@ -62,7 +64,8 @@ html, body
 .page-wrapper
 {
 	width: 100%;
-	position: relative;
+	position: absolute;
+	/* position: fixed; */
 	background: #fff;
 
 	overflow-x: hidden;
@@ -653,11 +656,6 @@ footer a:hover
 		background: #e5ffb2;
 	}
 
-	.page-wrapper
-	{
-
-	}
-
 	.page-inner
 	{
 		width: 94%;
@@ -784,11 +782,6 @@ footer a:hover
 		font-size: 50px;
 	}
 
-	.page-wrapper
-	{
-
-	}
-
 	.page-inner
 	{
 		width: 90%;
@@ -907,11 +900,6 @@ footer a:hover
 	{
 		font-size: 50px;
 		background: #fff;
-	}
-
-	.page-wrapper
-	{
-
 	}
 
 	.page-inner

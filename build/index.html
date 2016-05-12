@@ -12,12 +12,13 @@
 <link rel="stylesheet" type="text/css" href="public/css/reset.css">
 <link rel="stylesheet" type="text/css" href="public/css/simonk.css">
 <link rel="stylesheet" type="text/css" href="public/css/extra.css">
+<link rel="stylesheet" type="text/css" href="public/css/preview.css">
 
 <title>The Portfolio of Simon Kinslow</title>
 
 </head>
 
-<body onload="portfolio_init(event)">
+<body onload="portfolio_init(event); preview_init();">
 
 <div class="mobile-nav tween">
 	<div class="page-inner">
@@ -29,7 +30,7 @@
 		</div>
 
 		<ul class="mobile-nav-main font-light">
-			<li class="page-current" onclick="navigation_event(event)"><a href="#">Welcome</a></li>
+			<li class="page-current" onclick="navigation_event(event);"><a href="#">Welcome</a></li>
 			<li><a href="work.html">Work</a></li>
 			<li><a href="personal.html">Own Projects</a></li>
 			<li><a href="contact.html">Contact / Misc</a></li>
@@ -37,6 +38,16 @@
 
 	</div>
 </div> <!-- .mobile-nav -->
+
+<div id="preview" class="tween preview-default preview-hide">
+	<div class="preview-preloader">
+		<div class="preview-preloader-sprite fill"></div>
+	</div>
+
+	<div class="preview-content">
+		<img src="public/img/projectBarilla.jpg">
+	</div>
+</div> <!-- #preview -->
 
 <div class="page-wrapper tween">
 
@@ -108,7 +119,8 @@
 						</li>
 
 						<li class="project-info-ui">
-							<a class="ui-basic-button font-heavy tween" href="#">Design preview</a>
+							<!-- <a class="ui-basic-button font-heavy tween" onclick="preview_request(event);" data-img="public/img/projectBarilla.jpg">Design preview</a> -->
+							<div class="ui-basic-button font-heavy tween" onclick="preview_request(event);" data-img="public/img/projectBarilla.jpg">Design preview</div>
 							<a class="ui-basic-button font-heavy tween" href="#">View website</a>
 						</li>
 					</ul>
@@ -144,7 +156,8 @@
 						</li>
 
 						<li class="project-info-ui">
-							<a class="ui-basic-button font-heavy tween" href="#">Design preview</a>
+							<!-- <a class="ui-basic-button font-heavy tween" href="#">Design preview</a> -->
+							<div class="ui-basic-button font-heavy tween" onclick="preview_request(event);" data-img="public/img/projectBarilla.jpg">Design preview</div>
 							<a class="ui-basic-button font-heavy tween" href="#">View website</a>
 						</li>
 					</ul>
@@ -194,16 +207,11 @@
 
 </div> <!-- .page-wrapper -->
 
-<!-- <footer>
-	<div class="page-content">
-		<div class="page-inner">
-			<p class="signoff-deets font-heavy">Designed & developed 2016</p>
-			<p class="signoff-email font-heavy tween"><a href="#">simonkinslow@gmail.com</a></p>
-		</div>
-	</div>
-</footer> -->
+
+
 
 <script type="text/javascript" src="public/js/simonk.js"></script>
+<script type="text/javascript" src="public/js/preview.js"></script>
 </body>
 
 </html>

@@ -6,7 +6,7 @@ var displayList;
 
 function portfolio_init(event)
 {
-	trace("loaded!");
+	trace("portfolio_init();");
 
 	displayList = {};
 
