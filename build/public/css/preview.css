@@ -32,48 +32,21 @@
 	transition: opacity 250ms ease-in;
 
 	z-index: 0;
-
-
-/* 	-webkit-transform: translateX(50%);
-	transform: translateX(50%); */
 }
+
+
 
 #preview .preview-preloader-sprite
 {
-	width: 80px;
-	height: 80px;
+	width: 240px;
+	height: 240px;
 
 	position: absolute;
 	left: 0; right: 0; top: 0; bottom: 0;
 
 	margin: 80px auto 0 auto;
 
-	border-radius: 100%;
-	background: #66245b;
-
-	-webkit-transform-origin: 50% 50%;
-	transform-origin: 50% 50%;
-
 	z-index: 0;
-}
-
-#preview .preview-preloader-dot
-{
-	width: inherit;
-	height: inherit;
-	position: absolute;
-	left: 0; top: 0;
-}
-
-#preview .preview-preloader-white
-{
-	width: 8px;
-	height: 8px;
-	position: absolute;
-	left: 0; right: 0; top: 8px; bottom: 0;
-	margin: 0 auto;
-	border-radius: 100%;
-	background: #e5ffb2;
 }
 
 .preview-lock
@@ -97,22 +70,54 @@
 	display: none;
 }
 
-.preview-preload-tween
+
+.preview-preloader-sprite .preview-preloader-dot
 {
-	-webkit-animation: previewPreloadTweenFrames 1000ms linear infinite;
-	animation: previewPreloadTweenFrames 1000ms linear infinite;
+	width: inherit;
+	height: inherit;
+	position: absolute;
+	left: 0; top: 0;
+
+	-webkit-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+
+	background: url(../img/wheel.svg) center center no-repeat;
 }
 
-@-webkit-keyframes previewPreloadTweenFrames
+.preview-preload-tween
+{
+	-webkit-animation: cogFrames 800ms linear infinite;
+	animation: cogFrames 800ms linear infinite;
+}
+
+@-webkit-keyframes cogFrames
 {
 	0%		{-webkit-transform: rotate(0deg);}
 	100%	{-webkit-transform: rotate(360deg);}
 }
 
-@keyframes previewPreloadTweenFrames
+@keyframes cogFrames
 {
 	0%		{transform: rotate(0deg);}
 	100%	{transform: rotate(360deg);}
+}
+
+@media only screen and (min-width: 300px)
+{
+	#preview .preview-preloader-sprite
+	{
+		width: 120px;
+		height: 120px;
+	}
+}
+
+@media only screen and (min-width: 600px)
+{
+	#preview .preview-preloader-sprite
+	{
+		width: 240px;
+		height: 240px;
+	}
 }
 
 /* RETINA LAPTOPS */
