@@ -20,7 +20,7 @@
 
 <body onload="portfolio_init(event); preview_init();">
 
-<div class="mobile-nav tween">
+<div class="mobile-nav tween mobile-nav-default">
 	<div class="page-inner">
 		<div class="nav">
 			<div class="nav-left center-y">
@@ -46,7 +46,7 @@
 				<div class="preview-preloader-white"></div>
 			</div>
 		</div>
-		<img src="" onload="trace('IMAGE!');">
+		<img src="" onload="preview_preloader_end(event);">
 	</div>
 </div> <!-- #preview -->
 

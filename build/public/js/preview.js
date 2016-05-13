@@ -7,6 +7,8 @@ function preview_init()
 	displayList.previewImg 				= document.querySelector("#preview img");
 	displayList.previewPreloader 	= document.querySelector("#preview .preview-preloader-dot");
 
+	trace(displayList.previewPreloader);
+
 	displayList.preview.addEventListener("click", preview_close, false);
 
 
@@ -18,7 +20,7 @@ function preview_request(event)
 	event.preventDefault();
 
 	previewMain = {};
-	previewMain.url_asset = event.target.attributes[2].nodeValue;
+	previewMain.url_asset = event.target.getAttribute("data-img");
 	previewMain.scrollSet	= event.pageY;
 
 	displayList.wrapper.classList.add("preview-lock");
@@ -33,6 +35,11 @@ function preview_request(event)
 	displayList.preview.classList.remove("preview-default");
 
 	trace(previewMain);
+}
+
+function preview_preloader_end(event)
+{
+	displayList.previewPreloader.classList.remove("preview-preload-tween");
 }
 
 function preview_close(event)
@@ -60,6 +67,5 @@ function preview_end(event)
 	displayList.wrapper.removeEventListener("transitionend", preview_end, false);
 
 	displayList.preview.classList.add("preview-default");
-	displayList.previewPreloader.classList.remove("preview-preload-tween");
 	displayList.previewImg.setAttribute("src", "");
 }

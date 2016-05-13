@@ -18,6 +18,7 @@ html, body
 	color: #4A4A4A;
 
 	background: #e5ffb2;
+	background: #fff;
 
 	overflow-x: hidden;
 }
@@ -352,6 +353,11 @@ p
 	color: #4A4A4A; !important;
 }
 
+.mobile-nav-default
+{
+	display: none;
+}
+
 .title-block
 {
 	width: 100%;
@@ -655,6 +661,7 @@ footer a:hover
 	{
 		font-size: 40px;
 		background: #e5ffb2;
+		background: #fff;
 	}
 
 	.page-inner
