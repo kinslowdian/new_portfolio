@@ -1,3 +1,4 @@
+// SIMON KINSLOW @kinslowdian 2016 //
 
 var previewMain;
 
@@ -6,8 +7,6 @@ function preview_init()
 	displayList.preview 					= document.querySelector("#preview");
 	displayList.previewImg 				= document.querySelector("#preview img");
 	displayList.previewPreloader 	= document.querySelector("#preview .preview-preloader-dot");
-
-	trace(displayList.previewPreloader);
 
 	displayList.preview.addEventListener("click", preview_close, false);
 
@@ -37,8 +36,6 @@ function preview_request(event)
 	window.scrollTo(0, 0);
 
 	displayList.preview.classList.remove("preview-default");
-
-	trace(previewMain);
 }
 
 function preview_safety(event)
@@ -54,24 +51,6 @@ function preview_preloader_end(event)
 	displayList.previewPreloader.classList.remove("preview-preload-tween");
 	displayList.previewImg.style.opacity = 1;
 }
-
-/*
-function preview_close(event)
-{
-	event.preventDefault();
-
-	displayList.wrapper.classList.remove("preview-safety");
-
-	displayList.wrapper.addEventListener("webkitTransitionEnd", preview_end, false);
-	displayList.wrapper.addEventListener("transitionend", preview_end, false);
-
-	displayList.wrapper.classList.remove("preview-lock");
-
-	var t = setTimeout(scrollReset, 20);
-
-	delete previewMain;
-}
-*/
 
 function preview_close(event)
 {

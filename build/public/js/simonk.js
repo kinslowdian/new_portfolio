@@ -1,3 +1,5 @@
+// SIMON KINSLOW @kinslowdian 2016 //
+
 var trace = function(msg){ console.log(msg); };
 
 var nav;

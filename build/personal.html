@@ -6,20 +6,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="description" content="Portfolio of Senior Digital Designer Simon Kinslow 2016">
 <meta name="keywords" content="Kinslowdian, Simon Kinslow, Designer, Developer" />
-<meta name="revised" content="Simon Kinslow, 09/05/2016" />
+<meta name="revised" content="Simon Kinslow, 13/05/2016" />
 
 <link href='https://fonts.googleapis.com/css?family=Arimo:400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="public/css/reset.css">
 <link rel="stylesheet" type="text/css" href="public/css/simonk.css">
 <link rel="stylesheet" type="text/css" href="public/css/extra.css">
+<link rel="stylesheet" type="text/css" href="public/css/preview.css">
 
 <title>The Portfolio of Simon Kinslow / Personal</title>
 
 </head>
 
-<body onload="portfolio_init(event);">
+<body onload="portfolio_init(event); preview_init();">
 
-<div class="mobile-nav tween">
+<div class="mobile-nav tween mobile-nav-default">
 	<div class="page-inner">
 		<div class="nav">
 			<div class="nav-left center-y">
@@ -37,6 +38,21 @@
 
 	</div>
 </div> <!-- .mobile-nav -->
+
+<div id="preview" class="tween preview-default preview-hide">
+	<div class="preview-content">
+
+		<div class="preview-preloader-sprite">
+			<div class="preview-preloader-dot tween">
+				<div class="preview-preloader-white"></div>
+			</div>
+		</div>
+
+		<img src="" onload="preview_preloader_end(event);">
+
+
+	</div>
+</div> <!-- #preview -->
 
 <div class="page-wrapper tween">
 
@@ -88,7 +104,7 @@
 						</li>
 
 						<li class="project-info-ui">
-							<a class="ui-basic-button font-heavy tween" href="#">Design preview</a>
+							<div class="ui-basic-button font-heavy tween" onclick="preview_request(event);" data-img="http://www.simonkinslow.com/_assets/_img/_workIMG/projectAdidasStella.jpg">Design preview</div>
 							<a class="ui-basic-button font-heavy tween" href="#">View website</a>
 						</li>
 					</ul>
@@ -106,7 +122,7 @@
 						</li>
 
 						<li class="project-info-ui">
-							<a class="ui-basic-button font-heavy tween" href="#">Design preview</a>
+							<div class="ui-basic-button font-heavy tween" onclick="preview_request(event);" data-img="http://www.simonkinslow.com/_assets/_img/_workIMG/projectAdidasStella.jpg">Design preview</div>
 							<a class="ui-basic-button font-heavy tween" href="#">View website</a>
 						</li>
 					</ul>
@@ -147,7 +163,7 @@
 						</li>
 
 						<li class="project-info-ui">
-							<a class="ui-basic-button font-heavy tween" href="#">Design preview</a>
+							<div class="ui-basic-button font-heavy tween" onclick="preview_request(event);" data-img="http://www.simonkinslow.com/_assets/_img/_workIMG/projectAdidasStella.jpg">Design preview</div>
 							<a class="ui-basic-button font-heavy tween" href="#">View website</a>
 						</li>
 					</ul>
@@ -165,7 +181,7 @@
 						</li>
 
 						<li class="project-info-ui">
-							<a class="ui-basic-button font-heavy tween" href="#">Design preview</a>
+							<div class="ui-basic-button font-heavy tween" onclick="preview_request(event);" data-img="http://www.simonkinslow.com/_assets/_img/_workIMG/projectAdidasStella.jpg">Design preview</div>
 							<a class="ui-basic-button font-heavy tween" href="#">View website</a>
 						</li>
 					</ul>
@@ -183,7 +199,7 @@
 						</li>
 
 						<li class="project-info-ui">
-							<a class="ui-basic-button font-heavy tween" href="#">Design preview</a>
+							<div class="ui-basic-button font-heavy tween" onclick="preview_request(event);" data-img="http://www.simonkinslow.com/_assets/_img/_workIMG/projectAdidasStella.jpg">Design preview</div>
 							<a class="ui-basic-button font-heavy tween" href="#">View website</a>
 						</li>
 					</ul>
@@ -205,7 +221,7 @@
 						</li>
 
 						<li class="project-info-ui">
-							<a class="ui-basic-button font-heavy tween" href="#">Design preview</a>
+							<div class="ui-basic-button font-heavy tween" onclick="preview_request(event);" data-img="http://www.simonkinslow.com/_assets/_img/_workIMG/projectAdidasStella.jpg">Design preview</div>
 							<a class="ui-basic-button font-heavy tween" href="#">View website</a>
 						</li>
 					</ul>
@@ -223,7 +239,7 @@
 						</li>
 
 						<li class="project-info-ui">
-							<a class="ui-basic-button font-heavy tween" href="#">Design preview</a>
+							<div class="ui-basic-button font-heavy tween" onclick="preview_request(event);" data-img="http://www.simonkinslow.com/_assets/_img/_workIMG/projectAdidasStella.jpg">Design preview</div>
 							<a class="ui-basic-button font-heavy tween" href="#">View website</a>
 						</li>
 					</ul>
@@ -241,7 +257,7 @@
 						</li>
 
 						<li class="project-info-ui">
-							<a class="ui-basic-button font-heavy tween" href="#">Design preview</a>
+							<div class="ui-basic-button font-heavy tween" onclick="preview_request(event);" data-img="http://www.simonkinslow.com/_assets/_img/_workIMG/projectAdidasStella.jpg">Design preview</div>
 							<a class="ui-basic-button font-heavy tween" href="#">View website</a>
 						</li>
 					</ul>
@@ -293,6 +309,7 @@
 </div> <!-- .page-wrapper -->
 
 <script type="text/javascript" src="public/js/simonk.js"></script>
+<script type="text/javascript" src="public/js/preview.js"></script>
 </body>
 
 </html>
