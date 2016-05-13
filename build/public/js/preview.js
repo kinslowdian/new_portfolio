@@ -23,11 +23,15 @@ function preview_request(event)
 	previewMain.url_asset = event.target.getAttribute("data-img");
 	previewMain.scrollSet	= event.pageY;
 
+	displayList.wrapper.addEventListener("webkitTransitionEnd", preview_safety, false);
+	displayList.wrapper.addEventListener("transitionend", preview_safety, false);
+
 	displayList.wrapper.classList.add("preview-lock");
 	displayList.wrapper.scrollTop += previewMain.scrollSet;
 
 	displayList.previewPreloader.classList.add("preview-preload-tween");
 
+	displayList.previewImg.style.opacity = 0;
 	displayList.previewImg.setAttribute("src", previewMain.url_asset);
 
 	window.scrollTo(0, 0);
@@ -37,15 +41,49 @@ function preview_request(event)
 	trace(previewMain);
 }
 
+function preview_safety(event)
+{
+	displayList.wrapper.removeEventListener("webkitTransitionEnd", preview_safety, false);
+	displayList.wrapper.removeEventListener("transitionend", preview_safety, false);
+
+	displayList.wrapper.classList.add("preview-safety");
+}
+
 function preview_preloader_end(event)
 {
 	displayList.previewPreloader.classList.remove("preview-preload-tween");
+	displayList.previewImg.style.opacity = 1;
 }
+
+/*
+function preview_close(event)
+{
+	event.preventDefault();
+
+	displayList.wrapper.classList.remove("preview-safety");
+
+	displayList.wrapper.addEventListener("webkitTransitionEnd", preview_end, false);
+	displayList.wrapper.addEventListener("transitionend", preview_end, false);
+
+	displayList.wrapper.classList.remove("preview-lock");
+
+	var t = setTimeout(scrollReset, 20);
+
+	delete previewMain;
+}
+*/
 
 function preview_close(event)
 {
 	event.preventDefault();
 
+	displayList.wrapper.classList.remove("preview-safety");
+
+	var t = setTimeout(preview_close_apply, 20);
+}
+
+function preview_close_apply()
+{
 	displayList.wrapper.addEventListener("webkitTransitionEnd", preview_end, false);
 	displayList.wrapper.addEventListener("transitionend", preview_end, false);
 
